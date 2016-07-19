@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+  div.row
+    div.col-md-6
+      form(action="/problem", method="post")
+        h2.form-signin-heading #{__("Start Quarrel")}
+        p
+          strong #{__("After you add the problem you will be asked to confirm it by clicking the link we will send you on your email.")}
+        div.form-group
+          input.form-control(name="subject", type="text", placeholder=__("Subject"), required)
+        div.form-group
+          textarea.form-control(name="problem", placeholder=__("Problem"), rows="10" required)
+          small #{__("Please, do not use HTML tags for formatting purpose.")}
+        div.form-group
+          input.form-control(name="name", type="text", placeholder=__("First name and last name") required)
+          small #{__("Field \"First name and last name\" will not be displayed.")}
+        div.form-group
+          input.form-control(name="email", type="email", placeholder=__("E-mail") required)
+          small #{__("Field \"E-mail\" will not be displayed.")}
+        button.btn.btn-large.btn-primary(type="submit") #{__("Ask")}

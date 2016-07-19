@@ -1,12 +1,12 @@
 var express = require('express');
 var router = express.Router();
-var bodyParser = require('body-parser');
+//var bodyParser = require('body-parser');
 var Node = require("../models/node");
 
 //express.use(bodyParser.urlencoded({ extended: true }));
 
 router.get('/new', function (req, res) {
-  res.render('quarrel/problem/new', { title: 'Hey', message: 'Hello there!' });
+  res.render('problem/new', { title: 'Hey', message: 'Hello there!' });
 });
 
 router.post('/', function (req, res) {
@@ -23,7 +23,7 @@ router.post('/', function (req, res) {
 });
 
 router.get('/confirm', function (req, res) {
-  res.render('quarrel/problem/confirm', { title: 'Hey', message: 'Hello there!' });
+  res.render('problem/confirm', { title: 'Hey', message: 'Hello there!' });
 });
 
 module.exports = router;

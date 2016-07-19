@@ -1,1 +1,12 @@
-{}
+{
+	"Start Quarrel": "Start Quarrel",
+	"After you add the problem you will be asked to confirm it by clicking the link we will send you on your email.": "After you add the problem you will be asked to confirm it by clicking the link we will send you on your email.",
+	"Subject": "Subject",
+	"Problem": "Problem",
+	"Please, do not use HTML tags for formatting purpose.": "Please, do not use HTML tags for formatting purpose.",
+	"First name and last name": "First name and last name",
+	"Field \"First name and last name\" will not be displayed.": "Field \"First name and last name\" will not be displayed.",
+	"E-mail": "E-mail",
+	"Field \"E-mail\" will not be displayed.": "Field \"E-mail\" will not be displayed.",
+	"Ask": "Ask"
+}
