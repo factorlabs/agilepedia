@@ -19,6 +19,24 @@
     <%= f.label :body %><br>
     <%= f.text_area :body %>
   </div>
+  <%= f.fields_for :user, @user do |user| %>
+    <div class="field">
+      <%= user.label :first_name %><br>
+      <%= user.text_field :first_name %>
+    </div>
+    <div class="field">
+      <%= user.label :last_name %><br>
+      <%= user.text_field :last_name %>
+    </div>
+    <div class="field">
+      <%= user.label :organisation %><br>
+      <%= user.text_field :organisation %>
+    </div>
+    <div class="field">
+      <%= user.label :email %><br>
+      <%= user.text_field :email %>
+    </div>
+  <% end %>
   <div class="actions">
     <%= f.submit %>
   </div>

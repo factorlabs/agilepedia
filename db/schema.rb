@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160720015415) do
+ActiveRecord::Schema.define(version: 20160720175325) do
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",                      null: false
@@ -37,9 +37,20 @@ ActiveRecord::Schema.define(version: 20160720015415) do
     t.integer  "depth",          default: 0, null: false
     t.integer  "children_count", default: 0, null: false
     t.string   "slug"
+    t.integer  "user_id"
   end
 
   add_index "sentences", ["id"], name: "sqlite_autoindex_sentences_1", unique: true
   add_index "sentences", ["slug"], name: "index_sentences_on_slug", unique: true
+  add_index "sentences", ["user_id"], name: "index_sentences_on_user_id"
+
+  create_table "users", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "organisation"
+    t.string   "email"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
 
 end

@@ -15,6 +15,7 @@ class SentencesController < ApplicationController
   # GET /sentences/new
   def new
     @sentence = Sentence.new
+    @user = User.new
   end
 
   # GET /sentences/1/edit
@@ -69,6 +70,6 @@ class SentencesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sentence_params
-      params.require(:sentence).permit(:title, :body)
+      params.require(:sentence).permit(:title, :body, user_attributes: [:first_name, :last_name, :organisation, :email])
     end
 end
