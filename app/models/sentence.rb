@@ -6,6 +6,7 @@ class Sentence < ActiveRecord::Base
   belongs_to :user, autosave: true
   accepts_nested_attributes_for :user
   validates :title, :body, presence: true
+  include Confirmable
   
 
   def autosave_associated_records_for_user
